@@ -13,7 +13,6 @@ describe('Pruebas en <AddCategory/>', () =>{
         //screen.debug();
     })
 
-
     test('debe llamar onNewCategory si el input tiene un valor',()=>{
        
         const inputValue = 'Saitama';
@@ -34,7 +33,6 @@ describe('Pruebas en <AddCategory/>', () =>{
         //expect( onNewCategory ).toHaveBeenCallWith( inputValue );
     })
 
-
     test('no debe llamar onNewCategory si el input está vacio',()=>{
         const onNewCategory = jest.fn();
         render(<AddCategory onNewCategory={onNewCategory}/>);
@@ -45,4 +43,6 @@ describe('Pruebas en <AddCategory/>', () =>{
         expect( onNewCategory ).toHaveBeenCalledTimes(0);
         expect( onNewCategory ).not.toHaveBeenCalled();
     })
+
+
 })
